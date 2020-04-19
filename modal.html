@@ -1,0 +1,122 @@
+		<html>
+		<head>
+			<title>my images galary</title>
+			  
+		  <meta charset="utf-8">
+		        <meta name="viewport" content="width=device-width, initial-scale=1">
+		        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		        <!--javascript link-->
+		  </head>
+		<style>
+			.row{
+				padding:5px;
+			}
+			h2{
+				text-transform: uppercase;
+				margin-top: 60px;}
+				img{
+					border-radius: 8px;
+					box-shadow: 0 15px 30px yellow;
+					cursor:pointer;
+				}
+				 #popup-img{
+					border :5px solid #fff; 
+				}
+		    </style>
+		    <body>
+		    	<div class="container">
+		    	<div class="row">
+		  		<div class="col-sm-12 text-center">
+		   		<div class="form group">
+		    	<h2>pop up image using jquery</h2>
+	   			</div>
+	    		</div>
+		    	</div>
+		    	<!---1st row--->
+		    	<div class="row">
+		  		<div class="form-group">
+		   		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		 <img class="img-fulid popup" src="images/seabank.jpg" alt="image" width="200" height="150px"></div>
+		</div>
+				<div class="form-group">
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">    		
+		    <img class="img-fulid popup" src="images/tree.jpg" alt="image" width="200" height="150px"></div>
+		</div>
+		        	
+		        <div class="form-group">
+		      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">    		
+		    <img class="img-fulid popup" src="images/mywp.jpg" alt="image" width="200" height="150"></div>
+		</div>
+			    			<div class="form-group">
+			    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+
+		    <img  class="img-fulid popup"src="images/pic.jfif" alt=" image" width="200" height="150px;" ></div>
+		</div>
+		</div>
+		<!---middle row--->
+		    	<div class="row">
+		    			<div class="form-group">
+			    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		    <img class="img-fulid popup" src="images/mountain.jpg" alt="image" width="200px" height="150px;"></div>
+		</div>
+
+		    		<div class="form-group">
+			    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		    <img class="img-fulid popup" src="images/mountain.jpg" alt="image" width="200px" height="150px;"></div>
+		</div>
+			    		<div class="form-group">
+			   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		    <img  class="img-fulid popup" src="images/mytree.jpg" alt=" image" width="200px"height="150px;"></div>
+		</div>
+		    		<div class="form-group">
+			   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		    <img  class="img-fulid popup" src="images/snow.jpg" alt=" image" width="200px"height="150px;"></div>
+		</div>
+		</div>
+
+		<!--last row--->
+		  	<div class="row">
+		    		  <div class="form-group">
+		    		 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		    <img class="img-fulid popup" src="images/skyscrapers.jpg" alt="image" width="200px" height="150px" ></div>
+		</div>
+			    		<div class="form-group">
+			    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		    <img class="img-fulid popup" src="images/mywp.jpg" alt="image" width="200px" height="150px;" ></div>
+		</div>
+			    		<div class="form-group">
+			   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		    <img  class="img-fulid popup" src="images/mytree.jpg" alt=" image" width="200px"height="150px"></div>
+		</div>
+		    		<div class="form-group">
+			   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+		    <img  class="img-fulid popup" src="images/seabank.jpg" alt=" image" width="200px" height="150px"></div>
+		</div>
+		</div>
+		</div>
+		<!---large modal--->
+		<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>-->
+
+		<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="imageViewModal">
+		  	<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<img  id="popup-img" src="" alt="image" style="width:100%">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script>
+		$('.popup').click(function(){
+			var src=$(this).attr('src');
+			$('#popup-img').attr('src',src)
+			$("#imageViewModal").modal("show");
+		});
+		</script>	
+
+		    </body>
